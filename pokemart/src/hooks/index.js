@@ -31,20 +31,6 @@ const GlobalsProvider= ({ children }) => {
     });
   }
 
-  const removeQntFromCart = (id) => {
-    const newItem = cart.find((item) => item.id === id);
-
-    if (!newItem) return;
-
-    if (newItem.amount === 1) {
-      return setCart(state => state.filter((item) => item.id !== id));
-    }
-
-    return setCart(state => {
-      return state.map((item) => item.id === id ? {...item, amount: item.amount - 1} : item );
-    });
-  }
-
   const removeItemFromCart = (id) => {
     return setCart((state) => state.filter((product) => product.id !== id));
   }
@@ -124,7 +110,6 @@ const GlobalsProvider= ({ children }) => {
         cart,
         products,
         addToCart,
-        removeQntFromCart,
         removeItemFromCart,
         cartOptimize
       }}
