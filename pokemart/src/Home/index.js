@@ -28,6 +28,7 @@ function Home() {
   const [product, setProduct] = useState(null);
   const [open, setOpen] = useState(false);
   const [openCart, setOpenCart] = useState(false);
+  const [money, setMoney] = useState('');
   const { products } = useGlobals();
   return (
     <Container>
@@ -70,7 +71,7 @@ function Home() {
         <Column>
           <MoneyBox>
             <MoneyText> Money</MoneyText>
-            <MoneyInput />
+            <MoneyInput onChange={(v)=> setMoney(v.target.value)}/>
           </MoneyBox>
           <ButtonCollection>
             <p>Escolhe o seu tipo de aventura</p>
@@ -90,7 +91,7 @@ function Home() {
         </Column>
       </MarketBody>
       <ProductModal open={open} setOpen={setOpen} product={product}/>
-      <CartModal open={openCart} setOpen={setOpenCart}/>
+      <CartModal open={openCart} setOpen={setOpenCart} money={money} adventure={adventure}/>
     </Container>
   );
 }

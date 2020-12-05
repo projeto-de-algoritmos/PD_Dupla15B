@@ -6,7 +6,8 @@ const data = [
         "description":"A tool used for catching wild POKéMON.",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png",
         "priority": 1,
-        "adventureType":"captura"
+        "adventureType":"captura",
+        "amount": 1,
     },
     {
         "id": 2,
@@ -15,7 +16,8 @@ const data = [
         "description":"A good BALL with a higher catch rate than a POKé BALL.",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/great-ball.png",
         "priority": 2,
-        "adventureType":"captura"
+        "adventureType":"captura",
+        "amount": 1,
     },
     {
         "id": 3,
@@ -24,7 +26,8 @@ const data = [
         "description":"A better BALL with a higher catch rate than a GREAT BALL.",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ultra-ball.png",
         "priority": 3,
-        "adventureType":"captura"
+        "adventureType":"captura",
+        "amount": 1,
     },
     {
         "id": 4,
@@ -33,7 +36,8 @@ const data = [
         "description":"Restores the HP of a POKéMON by 20 points.",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/potion.png",
         "priority": 1,
-        "adventureType":"batalha"
+        "adventureType":"batalha",
+        "amount": 1,
     },
     {
         "id": 5,
@@ -42,7 +46,8 @@ const data = [
         "description":"Restores the HP of a POKéMON by 50 points.",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/super-potion.png",
         "priority": 2,
-        "adventureType":"batalha"
+        "adventureType":"batalha",
+        "amount": 1,
     },
     {
         "id": 6,
@@ -51,7 +56,8 @@ const data = [
         "description":"Restores the HP of a POKéMON by 200 points.",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/hyper-potion.png",
         "priority": 3,
-        "adventureType":"batalha"
+        "adventureType":"batalha",
+        "amount": 1,
     },
     {
         "id": 7,
@@ -60,7 +66,8 @@ const data = [
         "description":"A fizzy soda drink that restores HP by 50 points.",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/fresh-water.png",
         "priority": 1,
-        "adventureType":"viagem"
+        "adventureType":"viagem",
+        "amount": 1,
     },
     {
         "id": 8,
@@ -69,7 +76,8 @@ const data = [
         "description":"A fizzy soda drink that restores HP by 60 points.",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/soda-pop.png",
         "priority": 2,
-        "adventureType":"viagem"
+        "adventureType":"viagem",
+        "amount": 1,
     },
     {
         "id": 9,
@@ -78,7 +86,8 @@ const data = [
         "description":"A very sweet drink that restores HP by 80 points.",
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lemonade.png",
         "priority": 3,
-        "adventureType":"viagem"
+        "adventureType":"viagem",
+        "amount": 1,
     }
 ]
 

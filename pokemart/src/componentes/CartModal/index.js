@@ -5,8 +5,8 @@ import get from 'lodash/get';
 import { Button } from './styles';
 import { useGlobals } from '../../hooks/index';
 
-const CartModal = ({ open, setOpen, product}) => {
-  const { cart } = useGlobals();
+const CartModal = ({ open, setOpen, money, adventure}) => {
+  const { cart, cartOptimize } = useGlobals();
   return (
     <Dialog
       onClose={() => setOpen(false)}
@@ -33,12 +33,11 @@ const CartModal = ({ open, setOpen, product}) => {
         ))}
         
 
-        {/* <Button onClick={()=> {
-            addToCart(product.id);
-            setOpen(false);
+        <Button onClick={()=> {
+            cartOptimize(money, adventure);
           }}>
-          <p>Adicionar ao carrinho</p>
-        </Button> */}
+          <p>Otimizar</p>
+        </Button>
       </Container>
     </Dialog>
   );

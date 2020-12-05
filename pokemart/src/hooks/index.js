@@ -44,7 +44,7 @@ const GlobalsProvider= ({ children }) => {
         cache[g][h] = {num:0, itens: []}
       }
     }
-    let weights = items.map(item => item.price);
+    let weights = items.map(item => item.cost);
     let values = items.map(item => item.priority);
 
     for (let i = 0; i < items.length+1; i++) {
@@ -73,11 +73,15 @@ const GlobalsProvider= ({ children }) => {
    return cache[items.length][W];
 }
 
-  const cartOptimize = (wallet) => {
+  const cartOptimize = (wallet, adventure) => {
     if (wallet <= 0) return toast.error("Valor da carteira invalido!");
     if (cart.length === 0) return toast.error("O carrinho está vazio!");
 
-    const cartCopy = [...cart];
+    const cartTemp = cart.map(item=> ({...item, 
+        priority: item.adventureType === adventure ? item.priority*1.5: item.priority 
+      }));
+
+    const cartCopy = [...cartTemp];
 
     const ordenedCart = [];
 
@@ -87,10 +91,10 @@ const GlobalsProvider= ({ children }) => {
       }
     })
 
-    ordenedCart.sort((a, b) => (a.price > b.price) ? 1 : -1);
+    ordenedCart.sort((a, b) => (a.cost > b.cost) ? 1 : -1);
 
     const response = maxKnapsack(ordenedCart, wallet);
-
+    console.log(response)
     const unique = [...new Set(response.itens)];
 
     const newCart = unique.map(value => {
