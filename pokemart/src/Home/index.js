@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 import "./styles.css";
 import {
@@ -16,19 +16,19 @@ import {
   ButtonCollection,
   FocusType,
   Image,
-  Button
-} from './styles';
+  Button,
+} from "./styles";
 
-import ProductModal from '../componentes/ProductModal';
-import CartModal from '../componentes/CartModal';
-import {useGlobals} from '../hooks/index';
+import ProductModal from "../componentes/ProductModal";
+import CartModal from "../componentes/CartModal";
+import { useGlobals } from "../hooks/index";
 
 function Home() {
-  const [adventure, setAdventure] = useState('');
+  const [adventure, setAdventure] = useState("");
   const [product, setProduct] = useState(null);
   const [open, setOpen] = useState(false);
   const [openCart, setOpenCart] = useState(false);
-  const [money, setMoney] = useState('');
+  const [money, setMoney] = useState("");
   const { products } = useGlobals();
   return (
     <Container>
@@ -47,11 +47,13 @@ function Home() {
       </Header>
       <MarketBody>
         <ItensDiv>
-          {products.map(item=>(
-            <SingleItem onClick={()=> {
+          {products.map((item) => (
+            <SingleItem
+              onClick={() => {
                 setOpen(true);
                 setProduct(item);
-              }}>
+              }}
+            >
               <Image src={item.sprite} />
               <ItenDescription>
                 <div style={{ alignSelf: "center" }}>
@@ -62,7 +64,9 @@ function Home() {
               </ItenDescription>
               <Price>
                 <p style={{ marginTop: 0, marginLeft: 25 }}>Costs</p>
-                <p style={{ marginTop: 0, marginLeft: 25 }}>{`₽ ${item.cost}`}</p>
+                <p
+                  style={{ marginTop: 0, marginLeft: 25 }}
+                >{`₽ ${item.cost}`}</p>
               </Price>
             </SingleItem>
           ))}
@@ -71,27 +75,41 @@ function Home() {
         <Column>
           <MoneyBox>
             <MoneyText> Money</MoneyText>
-            <MoneyInput onChange={(v)=> setMoney(v.target.value)}/>
+            <MoneyInput onChange={(v) => setMoney(v.target.value)} />
           </MoneyBox>
           <ButtonCollection>
             <p>Escolhe o seu tipo de aventura</p>
-            <FocusType onClick={()=> setAdventure('batalha')} selected={adventure === 'batalha'}>
+            <FocusType
+              onClick={() => setAdventure("batalha")}
+              selected={adventure === "batalha"}
+            >
               <p>Batalha</p>
             </FocusType>
-            <FocusType onClick={()=> setAdventure('captura')} selected={adventure === 'captura'}>
+            <FocusType
+              onClick={() => setAdventure("captura")}
+              selected={adventure === "captura"}
+            >
               <p>Captura</p>
             </FocusType>
-            <FocusType onClick={()=> setAdventure('viagem')} selected={adventure === 'viagem'}>
+            <FocusType
+              onClick={() => setAdventure("viagem")}
+              selected={adventure === "viagem"}
+            >
               <p>Viagem</p>
             </FocusType>
-            <Button onClick={()=> setOpenCart(true)}>
+            <Button onClick={() => setOpenCart(true)}>
               <p>Finalizar compra</p>
             </Button>
           </ButtonCollection>
         </Column>
       </MarketBody>
-      <ProductModal open={open} setOpen={setOpen} product={product}/>
-      <CartModal open={openCart} setOpen={setOpenCart} money={money} adventure={adventure}/>
+      <ProductModal open={open} setOpen={setOpen} product={product} />
+      <CartModal
+        open={openCart}
+        setOpen={setOpenCart}
+        money={money}
+        adventure={adventure}
+      />
     </Container>
   );
 }
