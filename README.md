@@ -1,44 +1,50 @@
-**!! Atenção: Renomeie o seu repositório para (Tema)_(NomeDoProjeto). !!** 
+# PokeMart
 
-Temas:
- - Grafos1
- - Grafos2
- - PD
- - D&C
- - Greed
- - Final 
- 
- **!! *Não coloque os nomes dos alunos no título do repositório*. Exemplo de título correto: Grafos2_Labirinto-do-Minotauro !!**
- 
- (Apague essa seção)
-
-# NomedoProjeto
-
-**Número da Lista**: X<br>
-**Conteúdo da Disciplina**: XXXXXXXXXX<br>
+**Número da Lista**: 5<br>
+**Conteúdo da Disciplina**: Programação Dinâmica<br>
 
 ## Alunos
 |Matrícula | Aluno |
 | -- | -- |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
+| 15/0120630  |  Caio Oliveira de Moraes |
+| 16/0015294  |  Matheus Rodrigues do Nascimento |
 
 ## Sobre 
-Descreva os objetivos do seu projeto e como ele funciona. 
+Muitas vezes na avenutura pokemon é preciso escolher o que comprar e como gastar o seu dinhiero, com o pokemart ficou mais fácil esoclher como gastar seu dinhiero, informe quanto de dinheiro você possui, os itens de deseja levar em sua jornada e qual o seu foco, batalha, capturar novos pokemnos ou viajar, assim o pokemart fara uma otimização em quais itens você deve levar de acordo com seu tipo de aventura. 
 
 ## Screenshots
-Adicione 3 ou mais screenshots do projeto em funcionamento.
+
+![print1](./assets/print1.png)
+
+![print2](./assets/print2.png)
+
+![print3](./assets/print3.png)
+
+
+
 
 ## Instalação 
-**Linguagem**: xxxxxx<br>
-**Framework**: (caso exista)<br>
+**Linguagem**: Javascript<br>
+**Framework**: React<br>
 Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
 
 ## Uso 
-Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.
+
+Instale as dependencias
+
+`yarn `
+
+Rode a aplicação com o comando 
+
+`yarn start`
+
+Acesse o pokemart na página
+
+`localhost:3000`
+
 
 ## Outros 
-Quaisquer outras informações sobre seu projeto podem ser descritas abaixo.
+O vídeo se encontra na pasta assets
 
 
 
